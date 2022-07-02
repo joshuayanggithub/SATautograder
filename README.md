@@ -1,5 +1,5 @@
 # SATautograder
-Grades the reading section of a SAT collegboard form given a picture
+Grades the reading, writing section of a SAT collegboard form given a picture
 
 <img width="1393" alt="Screen Shot 2022-06-23 at 8 41 08 PM" src="https://user-images.githubusercontent.com/85262856/175457602-e1fd2db5-dc5a-4389-b3c0-fa579a2e84f2.png">
 
