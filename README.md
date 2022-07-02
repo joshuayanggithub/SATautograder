@@ -1,7 +1,7 @@
 # SATautograder
 Grades the reading, writing section of a SAT collegboard form given a picture
 
-![Uploading Screen Shot 2022-07-02 at 11.49.00 AM.png…]()
+<img width="1368" alt="Screen Shot 2022-07-02 at 11 52 16 AM" src="https://user-images.githubusercontent.com/85262856/177013001-60dfa261-b583-40eb-9ef3-af229169e720.png">
 
 # Usage
 Take a picture of your test form preferably using your phone camera. Alternatively you could take a picture with your webcam; Of course, it is possible, since I originally intended to use only webcam pictures, although **results would be inconsistent**, so it is best to be used with high resolution phone cameras. The problem with webcam is that the resolution will be so garbage and its very hard to keep your paper still while you press capture on your webcam app that the program will have a hard time distinguishing between bubbles and question numbers, motion blur, etc. . 
