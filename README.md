@@ -19,7 +19,13 @@ However, if the program is bugging out, you probably didn't do one of these thin
 
 As long as your bubbles are filled in neatly and within the lines correctly, everything should work fine. The program tolerates messy bubbles AS LONG AS there are no bubbles connecting to each other horizontally through pencil marks.
 
-This would **NOT** work, because the program would see this as **one** bubble instead of **two**
+This would **NOT** work, because the program would see choices A & B as **one** bubble instead of **two**
+
+<img width="1101" alt="Screen Shot 2022-07-02 at 11 24 00 AM" src="https://user-images.githubusercontent.com/85262856/177012241-32cf7767-4bd6-43c3-be39-a873f9c997d2.png">
+
+# Libs
+
+No machine learning used, just python OpenCV, a computer image library in C++/python/Java which isn't really machine learning tbh
 
 # Credits
 
