@@ -16,6 +16,8 @@ Take the picture zoomed in enough so the paper is focused clearly on the rectang
 
 If you take the picture too-zoomed-out like above it won't work.
 
+Drag the photo into the folder of this file, make sure it isn't some random folder like Desktop but a exclusive one. 
+
 In the settings file, type the year/date of the test (KA PT#3 or May 2018 U.S.) you are checking, the section of the test (reading/writing), and other options. When you run scanner.py, the program auto grades your test and gives you a score as well as all the questions you missed.
 
 The 'answers.txt' file has all the reading/writing test answers for all CB practice tests #1-10 as well as a lot of QAS assesment answers i.e. May 2019 or May 2017. If you want to add any extras that I missed, use the **same** format I use in the file.
