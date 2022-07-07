@@ -10,7 +10,9 @@ bcam app that the program will have a hard time distinguishing between bubbles a
 Make sure you follow this picture format: 
 ![PT7a](https://user-images.githubusercontent.com/85262856/177698386-ae738b78-2f0e-4263-886e-a25292cec2ee.JPG)
 Take the picture zoomed in enough so the paper is focused clearly on the rectangular bubble region with the nearest black outline completely visible.
-[PT3a](https://user-images.githubusercontent.com/85262856/177698378-8aa6c752-de07-4382-8bdd-a6e603aacede.jpg)
+
+![PT3a](https://user-images.githubusercontent.com/85262856/177698378-8aa6c752-de07-4382-8bdd-a6e603aacede.jpg)
+
 If you take the picture too-zoomed-out like above it won't work.
 
 In the settings file, type the year/date of the test (KA PT#3 or May 2018 U.S.) you are checking, the section of the test (reading/writing), and other options. When you run scanner.py, the program auto grades your test and gives you a score as well as all the questions you missed.
