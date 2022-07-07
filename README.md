@@ -1,11 +1,12 @@
 # SATautograder
 Grades the reading, writing section of a SAT collegboard form given a picture
 
+**_This is in Beta and still in development_**
+
 <img width="1368" alt="Screen Shot 2022-07-02 at 11 52 16 AM" src="https://user-images.githubusercontent.com/85262856/177013001-60dfa261-b583-40eb-9ef3-af229169e720.png">
 
 # Usage
-Take a picture of your test form preferably using your phone camera. Alternatively you could take a picture with your webcam; Of course, it is possible, since I originally intended to use only webcam pictures, although **results would be inconsistent**, so it is best to be used with high resolution phone cameras. The problem with webcam is that the resolution will be so garbage and its very hard to keep your paper still while you press capture on your we!
-bcam app that the program will have a hard time distinguishing between bubbles and question numbers, motion blur, etc. . 
+Take a picture of your test form preferably using your phone camera. The problem with webcam photos or any other poor quality camera is that the resolution will be very bad and the **results would be inconsistent** as a result, because the program will have a hard time pinpointing bubbles, so it is best to be used with high resolution phone cameras.
 
 Make sure you follow this picture format: 
 ![PT7a](https://user-images.githubusercontent.com/85262856/177698386-ae738b78-2f0e-4263-886e-a25292cec2ee.JPG)
@@ -24,12 +25,12 @@ Once you run the scanner.py file a python window will open. Click on the window 
 Currently this program only works with the old version of the SAT scantron. In recent years, a different scantron is used, but no functionality has been added for that because one is enough. Make sure the scantron you are using **MATCHES** what the sample picture uses.
 <img width="1396" alt="Screen Shot 2022-07-02 at 11 34 12 AM" src="https://user-images.githubusercontent.com/85262856/177012494-1472d1bd-4843-43f6-b0df-ed43fe94a41b.png">
 <img width="1393" alt="Screen Shot 2022-06-23 at 8 41 08 PM" src="https://user-images.githubusercontent.com/85262856/175457602-e1fd2db5-dc5a-4389-b3c0-fa579a2e84f2.png">
-From these two photos you can clearly tell the difference between Webcam and phone resolutions, as well as how the bubble outlines are much thinner on the phone picture despite, the size of the outlines in the pixel being a fixed value; in other words, the bubble outline on the webcam photo appears much thicker because the resolution is worse.
+From these two photos you can clearly tell the difference between Webcam and phone resolutions, as well as how the bubble outlines are much thinner on the phone picture despite, the size of the outlines in the pixel being a fixed value; in other words, the bubble outline on the webcam photo appears much thicker because the resolution is worse. **_9 times out of ten_** the program will **ERROR** out with webcam/poor quality photos.
 # Errors
 
 The most common error would be the program over/undercounting the bubbles, it mostly never happens with phone camera, but can be pretty common on webcam photos.
 
-However, if the program is bugging out, you probably didn't do one of these things: Held the sheet in front of the webcam so that the bubbles are clearly visible, held the sheet straight and not curved (although a slight curve would still work properly). A 720p webcam works fine also.
+However, if the program is bugging out, **you probably did one of these things:** The rectangular bubble region isn't clearly visible, the bubbles were filled in poorly, the photo is terrible resolution/terrible lighting.
 
 As long as your bubbles are filled in neatly and within the lines correctly, everything should work fine. The program tolerates messy bubbles AS LONG AS there are no bubbles connecting to each other horizontally through pencil marks.
 
@@ -40,6 +41,6 @@ This would **NOT** work, because the program would see choices A & B as **one** 
 # Libs
 OpenCV, a computer vision library;imutils, a libary simplifying opencv actions into easy-to-use functions; and numpy is used.
 
-# Citations
+# Shoutout Adrian Rosebrock
 
-pyimagesearch's OMR blog was a insanely helpful post that aided me and I used some code snippets in mine. I also noticed almost every python amateur bubble scanner on google/github uses this blog as some type of source...
+pyimagesearch's OMR blog was a insanely helpful post that aided me and I used some code snippets in mine. I also noticed almost every python amateur bubble scanner on google/github uses this blog's code in some type of variation...
