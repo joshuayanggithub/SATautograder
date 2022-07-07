@@ -1,5 +1,5 @@
 # SATautograder
-Grades the reading, writing section of a SAT collegboard form given a picture
+Grades the reading, writing section of a SAT collegboard form given a picture; does not work for math, and don't plan on making it do so
 
 **_This is in Beta and prone to errors, although it works 99% of time rn for me, provided the conditions below are satisfied_**
 
