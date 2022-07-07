@@ -1,7 +1,7 @@
 # SATautograder
 Grades the reading, writing section of a SAT collegboard form given a picture
 
-**_This is in Beta and still in development_**
+**_This is in Beta and prone to errors, though it works perfectly for me, provided the conditions below are done properly_**
 
 <img width="1368" alt="Screen Shot 2022-07-02 at 11 52 16 AM" src="https://user-images.githubusercontent.com/85262856/177013001-60dfa261-b583-40eb-9ef3-af229169e720.png">
 
