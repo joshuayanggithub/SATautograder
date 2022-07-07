@@ -4,11 +4,20 @@ Grades the reading, writing section of a SAT collegboard form given a picture
 <img width="1368" alt="Screen Shot 2022-07-02 at 11 52 16 AM" src="https://user-images.githubusercontent.com/85262856/177013001-60dfa261-b583-40eb-9ef3-af229169e720.png">
 
 # Usage
-Take a picture of your test form preferably using your phone camera. Alternatively you could take a picture with your webcam; Of course, it is possible, since I originally intended to use only webcam pictures, although **results would be inconsistent**, so it is best to be used with high resolution phone cameras. The problem with webcam is that the resolution will be so garbage and its very hard to keep your paper still while you press capture on your webcam app that the program will have a hard time distinguishing between bubbles and question numbers, motion blur, etc. . 
+Take a picture of your test form preferably using your phone camera. Alternatively you could take a picture with your webcam; Of course, it is possible, since I originally intended to use only webcam pictures, although **results would be inconsistent**, so it is best to be used with high resolution phone cameras. The problem with webcam is that the resolution will be so garbage and its very hard to keep your paper still while you press capture on your we!
+bcam app that the program will have a hard time distinguishing between bubbles and question numbers, motion blur, etc. . 
+
+Make sure you follow this picture format: 
+![PT7a](https://user-images.githubusercontent.com/85262856/177698386-ae738b78-2f0e-4263-886e-a25292cec2ee.JPG)
+Take the picture zoomed in enough so the paper is focused clearly on the rectangular bubble region with the nearest black outline completely visible.
+[PT3a](https://user-images.githubusercontent.com/85262856/177698378-8aa6c752-de07-4382-8bdd-a6e603aacede.jpg)
+If you take the picture too-zoomed-out like above it won't work.
 
 In the settings file, type the year/date of the test (KA PT#3 or May 2018 U.S.) you are checking, the section of the test (reading/writing), and other options. When you run scanner.py, the program auto grades your test and gives you a score as well as all the questions you missed.
 
 The 'answers.txt' file has all the reading/writing test answers for all CB practice tests #1-10 as well as a lot of QAS assesment answers i.e. May 2019 or May 2017. If you want to add any extras that I missed, use the **same** format I use in the file.
+
+Once you run the scanner.py file a python window will open. Click on the window and keep pressing the spacebar key until the final grade photo is reached (there will be multiple python windows opened in the process to show the steps taken to pinpointing the bubble responses).
 
 Currently this program only works with the old version of the SAT scantron. In recent years, a different scantron is used, but no functionality has been added for that because one is enough. Make sure the scantron you are using **MATCHES** what the sample picture uses.
 <img width="1396" alt="Screen Shot 2022-07-02 at 11 34 12 AM" src="https://user-images.githubusercontent.com/85262856/177012494-1472d1bd-4843-43f6-b0df-ed43fe94a41b.png">
