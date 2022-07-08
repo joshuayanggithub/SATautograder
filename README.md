@@ -6,7 +6,7 @@ Grades the reading, writing section of a SAT collegboard form given a picture; d
 <img width="700" alt="Screen Shot 2022-07-02 at 11 52 16 AM" src="https://user-images.githubusercontent.com/85262856/177013001-60dfa261-b583-40eb-9ef3-af229169e720.png">
 
 # Python Libraries/Preresiquites
-[OpenCV](https://pypi.org/project/opencv-python/), a computer vision library; [imutils](https://github.com/PyImageSearch/imutils), a libary simplifying opencv actions into easy-to-use functions; and [numpy](https://numpy.org/) is used. Install each respective python library.
+[OpenCV](https://pypi.org/project/opencv-python/), a computer vision library; [imutils](https://github.com/PyImageSearch/imutils), a libary simplifying opencv actions into easy-to-use functions; and [numpy](https://numpy.org/) is used. **Install each respective python library.**
 
 # Usage
 Take a picture of your test form preferably using your phone camera. The problem with webcam photos or any other poor quality camera is that the resolution will be very bad and the **results would be inconsistent** as a result, because the program will have a hard time pinpointing bubbles, so it is best to be used with high resolution phone cameras.
