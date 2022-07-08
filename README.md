@@ -17,6 +17,8 @@ Currently this program only works with the [old version](https://github.com/josh
 
 Take a picture of your test form preferably using your phone camera. The problem with webcam photos or any other poor quality camera is that the resolution will be very bad and the **results would be inconsistent** as a result, because the program will have a hard time pinpointing bubbles, so it is best to be used with high resolution phone cameras.
 
+Jpg, png, jpeg format only, and sample working photos located in tests folder.
+
 Take the picture zoomed in enough so the paper is focused clearly on the rectangular bubble region with the nearest black outline completely visible. Make sure the paper outline isn't fully visible:
 
 <img width="400" alt="Correct" src="https://user-images.githubusercontent.com/85262856/177921523-46dbc7a5-34d2-41bd-8a93-e9a44623b05a.JPG">
