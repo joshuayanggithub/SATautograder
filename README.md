@@ -11,17 +11,12 @@ Grades the reading, writing section of a SAT collegboard form given a picture; d
 # Usage
 Take a picture of your test form preferably using your phone camera. The problem with webcam photos or any other poor quality camera is that the resolution will be very bad and the **results would be inconsistent** as a result, because the program will have a hard time pinpointing bubbles, so it is best to be used with high resolution phone cameras.
 
-Make sure you follow this picture format: 
+Take the picture zoomed in enough so the paper is focused clearly on the rectangular bubble region with the nearest black outline completely visible. Make sure the paper outline isn't fully visible:
 
-<img width="700" alt="Correct" src="https://user-images.githubusercontent.com/85262856/177013001-60dfa261-b583-40eb-9ef3-af229169e720.png)">
+<img width="400" alt="Correct" src="https://user-images.githubusercontent.com/85262856/177921523-46dbc7a5-34d2-41bd-8a93-e9a44623b05a.JPG">
+If you take the picture too-zoomed-out of the black outline bubble region like below it won't work; make sure you can't see the full paper outline like you can below:
 
-
-Take the picture zoomed in enough so the paper is focused clearly on the rectangular bubble region with the nearest black outline completely visible.
-
-If you take the picture too-zoomed-out like below it won't work:
-
-<img width="700" alt="Wrong" src="https://user-images.githubusercontent.com/85262856/177698378-8aa6c752-de07-4382-8bdd-a6e603aacede.jpg)">
-
+<img width="400" alt="Wrong" src="https://user-images.githubusercontent.com/85262856/177921532-6cb93200-f736-4e67-9f6c-b3ca1a04c9eb.jpg">
 Drag the photo into the folder of this file, make sure it isn't some random folder like Desktop but a exclusive one. 
 
 In the settings.py file, type the year/date of the test you are checking, the section of the test (reading/writing), and other options. When you run scanner.py, the program auto grades your test and gives you a score as well as all the questions you missed.
@@ -40,7 +35,7 @@ However, if the program is bugging out, **you probably did one of these things:*
 
 As long as your bubbles are filled in neatly and within the lines correctly, everything should work fine. The program tolerates messy bubbles AS LONG AS there are no bubbles connecting to each other horizontally through pencil marks.
 
-# Bad quality photos
+# Good v.s. Bad quality photos
 
 <img width="700" alt="Screen Shot 2022-07-02 at 11 34 12 AM" src="https://user-images.githubusercontent.com/85262856/177012494-1472d1bd-4843-43f6-b0df-ed43fe94a41b.png">
 <img width="700" alt="Screen Shot 2022-06-23 at 8 41 08 PM" src="https://user-images.githubusercontent.com/85262856/175457602-e1fd2db5-dc5a-4389-b3c0-fa579a2e84f2.png">
