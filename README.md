@@ -9,6 +9,12 @@ Grades the reading, writing section of a SAT collegboard form given a picture; d
 [OpenCV](https://pypi.org/project/opencv-python/), a computer vision library; [imutils](https://github.com/PyImageSearch/imutils), a libary simplifying opencv actions into easy-to-use functions; and [numpy](https://numpy.org/) is used. **Install each respective python library.**
 
 # Usage
+
+
+Currently this program only works with the [old version](https://github.com/joshuayanggithub/SATautograder/files/9072963/PrepScholar-sat-practice-answer-sheet.pdf)
+ of the SAT scantron. In recent years, [a different scantron was used for official SAT testing](https://github.com/joshuayanggithub/SATautograder/files/9072966/AnswerSheet.pdf)
+, but that does not work yet. Make sure the scantron you are using **MATCHES** what the sample picture uses.
+
 Take a picture of your test form preferably using your phone camera. The problem with webcam photos or any other poor quality camera is that the resolution will be very bad and the **results would be inconsistent** as a result, because the program will have a hard time pinpointing bubbles, so it is best to be used with high resolution phone cameras.
 
 Take the picture zoomed in enough so the paper is focused clearly on the rectangular bubble region with the nearest black outline completely visible. Make sure the paper outline isn't fully visible:
@@ -25,7 +31,6 @@ The 'answers.txt' file has all the reading/writing test answers for all CB pract
 
 Once you run the scanner.py file a python window will open. Click on the window and **keep pressing the spacebar key** until the final grade photo is reached (there will be multiple python windows opened in the process to show the steps taken to pinpointing the bubble responses).
 
-Currently this program only works with the old version of the SAT scantron. In recent years, a different scantron is used, but no functionality has been added for that because one is enough. Make sure the scantron you are using **MATCHES** what the sample picture uses.
 
 # Errors
 
