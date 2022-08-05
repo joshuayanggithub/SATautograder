@@ -48,10 +48,6 @@ def removeRectContour(img, pw, ph):
             cv2.drawContours(mask, c, -1, (0,0,0,0), 30)
             cv2.drawContours(thresh, c, -1, (0,0,0), 30)
             thresh = cv2.bitwise_and(thresh, thresh, mask=mask)
-
-            cv2.imshow("Mask", mask)
-            cv2.imshow("After", thresh)
-            cv2.waitKey(0)
         else:
             break
     cv2.rectangle(thresh, (0,0), (pw,ph), (0,0,0), 40) #safety measure in case curved border
@@ -236,4 +232,5 @@ def checkAns(imgpath):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+#runAllTests()
 checkAns(imgpath)
