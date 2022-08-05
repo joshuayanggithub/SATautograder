@@ -7,7 +7,7 @@ from settings import *
 
 sections = {1: "Reading", 2: "Writing", 3: "Math-No-Calc", 4: "Math-Calc"}
 folder_dir = os.getcwd()
-files_list = glob.glob(folder_dir + "/*")
+files_list = glob.glob(folder_dir + "/imgs/*")
 img_list = []
 for file in files_list:
     if (file.lower().endswith(".jpg") | file.lower().endswith(".png") | file.lower().endswith(".jpeg")):
@@ -41,9 +41,6 @@ def removeRectContour(img, pw, ph):
     cntrs, hiearchy = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     largest_areas = sorted(cntrs, key=cv2.contourArea, reverse=True)
     for c in largest_areas:
-        #b = cv2.drawContours(img.copy(), [c], -1, (0,0,255), 2)
-        #cv2.imshow("c", b)
-        #cv2.waitKey(0)
         area = cv2.contourArea(c)
         print(area)
         if (area >= form_area/2):
@@ -65,18 +62,11 @@ def checkAns(imgpath):
     img = cv2.imread(imgpath)
     gray = cv2.cvtColor(img.copy(), cv2.COLOR_BGR2GRAY) #converting image to grayscale format
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
-    cv2.imshow("blur", blur)
 
     thresh = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 31, 10)
 
-    cv2.imshow("thresh", thresh)
-    cv2.waitKey(0)
-
     cntrs, hiearchy = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE) #simple because we only need a rectangle
     cntrsImg = cv2.drawContours(img.copy(), cntrs, -1, (255, 0, 0), 1)
-    cv2.imshow("Contours", cntrsImg)
-    cv2.waitKey(0)
-
     cntr = findRectContour(img, cntrs)
 
     peri = cv2.arcLength(cntr, True)
@@ -84,8 +74,6 @@ def checkAns(imgpath):
     cntrImg = cv2.drawContours(img.copy(), cntr, -1, (255, 0, 0), 3)
     shape = cv2.drawContours(img.copy(), approx, -1, (255, 0, 0), 5)
     cv2.imshow("Rectangular Region", cntrImg)
-    cv2.imshow("Shape", shape)
-    cv2.waitKey(0)
 
     cntrImg = cv2.drawContours(img.copy(), cntr, -1, (255, 0, 0), 3)
 
@@ -99,24 +87,13 @@ def checkAns(imgpath):
     ph = bounds[0]
     form_area = pw * ph
 
-    cv2.imshow("Top-View Paper", paper)
-    cv2.imshow("Gray Top-View Paper", papergray)
-    cv2.waitKey(0)
-
     #binary image conversion
     thresh = cv2.adaptiveThreshold(papergray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY_INV, 61, 10)
     thresh = removeRectContour(paper, pw, ph)
-    #thresh = cv2.threshold(papergray, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
-    #thresh = cv2.ximgproc.niBlackThreshold(papergray, 255, cv2.THRESH_BINARY_INV, 41, -0.1, binarizationMethod=cv2.ximgproc.BINARIZATION_NICK)
-    cv2.imshow("Binary", thresh)
-    cv2.waitKey(0)
+    
     #open cv find contours aims to find white objects, not black
     cntrs, hiearchy = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE) #sometimes external works better
-    #cntrs, hiearchy = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     papercntrs = cv2.drawContours(paper.copy(), cntrs, -1, (0, 255, 0), 1)
-
-    cv2.imshow("All-contours", papercntrs)
-    cv2.waitKey(0)
 
     bubbles = []
     widths = []
@@ -203,9 +180,6 @@ def checkAns(imgpath):
             #bubbles.append(c)
             cv2.rectangle(bubbles_rect, (x, y), (x+w, y+h), (0, 0, 255), 2)
 
-    cv2.imshow("bubblesrect",bubbles_rect)
-    cv2.waitKey(0)
-
     bubbles = contours.sort_contours(bubbles, method="left-to-right")[0]
 
     qpercol = 0
@@ -240,10 +214,8 @@ def checkAns(imgpath):
                 if bubbled is None or ratio > bubbled[0]:
                     bubbled = (ratio, j)
 
-            debugstring = debugstring + str(qnum) + "\n"
             ans = ord(answers[qnum-1])-ord('A')
 
-            nobubble = False
             values.sort()
             avg = sum / (float(4*qnum))
             # check to see if the bubbled answer is correct
@@ -253,18 +225,15 @@ def checkAns(imgpath):
                 correct += 1
             else:
                 wrong += (str(qnum) + " ")
-            debugstring = debugstring + str(values) + "\n"
             if (ShowAnswer == True): # draw the outline of the correct answer on the test
                 cv2.drawContours(paper, [cnts[ans]], -1, color, 2)
             else: #alternatively simply mark whether the user's answer is right or wrong
                 cv2.drawContours(paper, [cnts[bubbled[1]]], -1, color, 2)
 
-    print(debugstring)
     fontScale = 0.8
     cv2.putText(paper, f"{correct}/{totalq} | Wrong answers: {wrong}", (10, 30),cv2.FONT_HERSHEY_SIMPLEX, fontScale, (0, 0, 255), 2)
     cv2.imshow("Final Corrected Paper",paper)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-#runAllTests()
 checkAns(imgpath)
